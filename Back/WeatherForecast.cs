@@ -1,4 +1,4 @@
-namespace Back;
+namespace CinemaAPI;
 
 public class WeatherForecast
 {

@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/Back/bin/Debug/net7.0/Back.dll",
+            "program": "${workspaceFolder}/Back/bin/Debug/net7.0/CinemaAPI.dll",
             "args": [],
             "cwd": "${workspaceFolder}/Back",
             "stopAtEntry": false,

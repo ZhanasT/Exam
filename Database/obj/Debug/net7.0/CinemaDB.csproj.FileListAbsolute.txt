@@ -1,0 +1,14 @@
+D:\Zhanas\terricon\Exam ASP.NET\Exam\Database\bin\Debug\net7.0\CinemaDB.deps.json
+D:\Zhanas\terricon\Exam ASP.NET\Exam\Database\bin\Debug\net7.0\CinemaDB.dll
+D:\Zhanas\terricon\Exam ASP.NET\Exam\Database\bin\Debug\net7.0\CinemaDB.pdb
+D:\Zhanas\terricon\Exam ASP.NET\Exam\Database\obj\Debug\net7.0\CinemaDB.csproj.AssemblyReference.cache
+D:\Zhanas\terricon\Exam ASP.NET\Exam\Database\obj\Debug\net7.0\CinemaDB.GeneratedMSBuildEditorConfig.editorconfig
+D:\Zhanas\terricon\Exam ASP.NET\Exam\Database\obj\Debug\net7.0\CinemaDB.AssemblyInfoInputs.cache
+D:\Zhanas\terricon\Exam ASP.NET\Exam\Database\obj\Debug\net7.0\CinemaDB.AssemblyInfo.cs
+D:\Zhanas\terricon\Exam ASP.NET\Exam\Database\obj\Debug\net7.0\CinemaDB.csproj.CoreCompileInputs.cache
+D:\Zhanas\terricon\Exam ASP.NET\Exam\Database\obj\Debug\net7.0\CinemaDB.dll
+D:\Zhanas\terricon\Exam ASP.NET\Exam\Database\obj\Debug\net7.0\refint\CinemaDB.dll
+D:\Zhanas\terricon\Exam ASP.NET\Exam\Database\obj\Debug\net7.0\CinemaDB.pdb
+D:\Zhanas\terricon\Exam ASP.NET\Exam\Database\obj\Debug\net7.0\ref\CinemaDB.dll
+D:\Zhanas\terricon\Exam ASP.NET\Exam\Database\bin\Debug\net7.0\CinemaDB.runtimeconfig.json
+D:\Zhanas\terricon\Exam ASP.NET\Exam\Database\obj\Debug\net7.0\CinemaDB.genruntimeconfig.cache
