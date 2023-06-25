@@ -12,6 +12,7 @@ public partial class Session
     public int MovieId { get; set; }
 
     public int HallId { get; set; }
+    public int Price { get; set; }
 
     public virtual Hall Hall { get; set; } = null!;
 

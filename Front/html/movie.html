@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кинотеатр</title>
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css" />
+
+    <script src="../js/movie_script.js">
+
+       
+    </script>
+</head>
+<body onload="onLoad(1)">
+    <header>
+        <span class="logo">Кинотеатр</span>
+    </header>
+    <section class="wrapper" id="wrapper">
+        <section class="content" id="content">
+            <div id="film-info">
+                <img id="film-poster">
+                <h2 id="film-name"></h2>
+                <p id="film-description" class="film-text"></p>
+                <ul id="genre-list" class="film-text">Жанры:
+
+                </ul>
+                <span class="film-text" id="age-limit"></span>
+                <span class="film-text" id="duration"></span>
+                <span class="film-text" id="director"></span>
+                <ul id="actors-list" class="film-text">Актеры:
+
+                </ul>
+                <span class="film-text" id="rating"></span>
+            </div>
+            <div class="sessions-by-films" id="sessions-by-films">
+                <span class="radio-container">
+                    <h3 class="sessions-by-films-header">Сеансы на фильм</h3>
+                    <form action="">
+                        <input type="radio" id="dayChoice1" name="contact" value="0" onclick="showTimeTable(1)" checked>
+                        <label for="dayChoice1">Сегодня</label>
+
+                        <input type="radio" id="dayChoice2" name="contact" value="1" onclick="showTimeTable(2)">
+                        <label for="dayChoice2">Завтра</label>
+
+                        <input type="radio" id="dayChoice3" name="contact" value="2" onclick="showTimeTable(3)">
+                        <label for="dayChoice3">Послезавтра</label>
+                    </form>
+                </span>
+			</div>
+        </section>
+    </section>
+</body>
+</html>

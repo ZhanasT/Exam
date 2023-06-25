@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кинотеатр</title>
+    <link rel="stylesheet" type="text/css" href="../styles/styles.css" />
+
+    <script src="../js/index_script.js">
+
+       
+    </script>
+</head>
+<body onload="showTimeTable(1)">
+    <header>
+        <span class="logo">Кинотеатр</span>
+    </header>
+    <section class="wrapper" id="wrapper">
+        
+        <section class="content" id="content">
+            <div class="description" id="description">
+                <img src="../Images/cinema.jpg" alt="cinema" class="cinema-image">
+                <p class="cinema-description">
+                    Кинотеатр 3D расположен в Караганде на проспекте Строителей. Гостей встречают два комфортабельных кинозала: Синий зал на 140 мест и Большой зал на 384 места. Примечательно, что Большой зал в кинотеатре является самым большим в Караганде.           
+                    Здесь установлено новейшее проекционное оборудование: BARCO 20c и BARCO 32b, акустическая система DOLBY DIGITAL с эффектом присутствия. Помимо кинотеатра в здании открыта лаборатория развлечений Magic lab для детей, зона Xbox-One, современный лобби-бар и ароматный кофе в кафе KoffeeRoom.
+                </p>
+            </div>
+        </section>
+        <section class="sessions-today">
+            <h2 class="sessions-header" id="sessions-header">Сеансы на сегодня: </h2>
+			<div class="sessions-by-films" id="sessions-by-films">
+                <span class="radio-container">
+                    <h3 class="sessions-by-films-header">Сеансы по фильмам: </h3>
+                    <form action="">
+                        <input type="radio" id="dayChoice1" name="contact" value="0" onclick="showTimeTable(1)" checked>
+                        <label for="dayChoice1">Сегодня</label>
+
+                        <input type="radio" id="dayChoice2" name="contact" value="1" onclick="showTimeTable(2)">
+                        <label for="dayChoice2">Завтра</label>
+
+                        <input type="radio" id="dayChoice3" name="contact" value="2" onclick="showTimeTable(3)">
+                        <label for="dayChoice3">Послезавтра</label>
+                    </form>
+                </span>
+			</div>
+            <br>
+            <h3 class="sessions-by-films-header radio-container">Сеансы по фильмам: </h3>
+            <div id="sessions-by-halls"></div>
+        </section>
+    </section>
+</body>
+</html>

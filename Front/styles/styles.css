@@ -1,0 +1,62 @@
+body {
+    background-color: #F4F4F4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+.wrapper {
+    margin: 0 auto;
+    width: 70%;
+    height: 100%;
+    box-shadow: 2px black inset;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+header {
+    height: 70px;
+    background-color: #141414;
+    color: white;
+}
+.logo {
+    font-size: 40px;
+    margin-left: 10px;
+}
+.description {
+    text-align: center;
+}
+.cinema-image, .cinema-description {
+    margin: 20px 20px;
+}
+.cinema-image {
+    height: 400px;
+}
+.sessions-header {
+    text-align: center;
+}
+.sessions-header {
+    display: grid;
+    grid: auto / auto;
+}
+.radio-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 20%;
+}
+#film-info {
+    height: 600px;
+}
+#film-poster {
+    height: 600px; 
+    float: left; 
+    margin-right: 50px;
+}
+#genre-list {
+    list-style-type: none;
+}
+.film-text {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#actors-list {
+    list-style-type: none;
+}
