@@ -71,4 +71,36 @@ public class Repository
 
         return movieInfo;
     }
+    public List<DataModels.Comment> GetCommentsByMovie(int movieId)
+    {
+        return db.Comments.Where(c => c.MovieId == movieId).Select(c => 
+            new DataModels.Comment {
+                UserName = c.Username,
+                CommentText = c.CommentText
+            }).ToList();
+
+    }
+    public async void AddUser(string login, string password)
+    {
+        var userToAdd = new User();
+        userToAdd.Login = login;
+        userToAdd.Password = password;
+        db.Users.Add(userToAdd);
+        await db.SaveChangesAsync();
+    }
+    public List<bool> SearchUser(string login, string password)
+    {
+        var foundedUser = db.Users.Include(u => u.Login).ToList().First();
+        if (foundedUser is not null)
+        {
+            if (foundedUser.Password == password)
+                return new List<bool> {true, true};
+            else
+                return new List<bool> {true, false};
+        }
+        else
+        {
+            return new List<bool> {false, false};
+        }
+    } 
 }

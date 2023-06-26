@@ -31,4 +31,9 @@ public class CinemaController : ControllerBase
     {
         return cinemaRepo.GetMovieInfo(id);
     }
+    [HttpGet(Name = "GetCommentsByMovie")]
+    public List<CinemaDB.DataModels.Comment> GetCommentsByMovie(int id)
+    {
+        return cinemaRepo.GetCommentsByMovie(id);
+    }
 }

@@ -73,3 +73,5 @@ d:\Zhanas\terricon\Exam ASP.NET\Exam\Back\obj\Debug\net7.0\CinemaAPI.genruntimec
 d:\Zhanas\terricon\Exam ASP.NET\Exam\Back\obj\Debug\net7.0\ref\CinemaAPI.dll
 D:\Zhanas\terricon\Exam ASP.NET\Exam\Back\bin\Debug\net7.0\Castle.Core.dll
 D:\Zhanas\terricon\Exam ASP.NET\Exam\Back\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Proxies.dll
+D:\Zhanas\terricon\Exam ASP.NET\Exam\Back\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Zhanas\terricon\Exam ASP.NET\Exam\Back\bin\Debug\net7.0\CinemaAPI.staticwebassets.runtime.json

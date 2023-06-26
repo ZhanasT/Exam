@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кинотеатр</title>
+    <link rel="stylesheet" type="text/css" href="../styles/login.css" />
+
+    <script src="../js/login_script.js">
+
+       
+    </script>
+</head>
+<body>
+    <header>
+        <span class="header-element">Кинотеатр</span>
+    </header>
+    <section class="wrapper" id="wrapper">
+        <section class="content" id="content">
+            <div class="login-container">
+                <div id="switcher">
+                    <div id="login-switch" onclick="loginSwitcher()"><span>Войти</span></div>
+                    <div id="register-switch" onclick="registerSwitcher()"><span>Зарегистрироваться</span></div>
+                </div>
+                <form method="POST" action="loginOrRegister">
+                    <div class="inputs">
+                        <label for="username">Логин:</label>
+                        <input type="text" name="username" id="username-input">
+                        <label for="password">Пароль:</label>
+                        <input type="password" name="password" id="password-input">
+                        <label for="password-again" id="password-again-label">Повторите пароль:</label>
+                        <input type="password" name="password-again" id="password-again-input">
+                    </div>
+                    
+                    <button type="submit" id="submit">Войти</button>
+                        
+                </form>
+            </div>
+
+        </section>
+    </section>
+</body>
+</html>

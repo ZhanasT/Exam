@@ -25,58 +25,7 @@ header {
     margin-right: 10px;
     color: white;
 }
-.description {
-    text-align: center;
-}
-.cinema-image, .cinema-description {
-    margin: 20px 20px;
-}
-.cinema-image {
-    height: 400px;
-}
-.sessions-header {
-    text-align: center;
-}
-.sessions-header {
-    display: grid;
-    grid: auto / auto;
-}
-.radio-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 20%;
-}
-#film-info {
-    height: 600px;
-}
-#film-poster {
-    height: 600px; 
-    float: left; 
-    margin-right: 50px;
-}
-#genre-list {
-    list-style-type: none;
-}
-.film-text {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-#actors-list {
-    list-style-type: none;
-}
-#comment-section-header {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-#comment-username {
-    font-weight: bold;
-}
-#comment-container {
-    background-color: #F4F4F4;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
+
 form {
     width: 300px;
     margin: 0 auto;

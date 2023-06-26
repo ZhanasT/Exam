@@ -1,0 +1,69 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Zhanas\\terricon\\Exam ASP.NET\\Exam\\Back\\wwwroot\\Images\\cinema.jpg",
+      "PackagePath": "staticwebassets\\Images\\cinema.jpg"
+    },
+    {
+      "Id": "D:\\Zhanas\\terricon\\Exam ASP.NET\\Exam\\Back\\wwwroot\\Images\\posters\\dungeons-and-dragons-poster.jpg",
+      "PackagePath": "staticwebassets\\Images\\posters\\dungeons-and-dragons-poster.jpg"
+    },
+    {
+      "Id": "D:\\Zhanas\\terricon\\Exam ASP.NET\\Exam\\Back\\wwwroot\\Images\\posters\\john-wick-4-poster.jpg",
+      "PackagePath": "staticwebassets\\Images\\posters\\john-wick-4-poster.jpg"
+    },
+    {
+      "Id": "D:\\Zhanas\\terricon\\Exam ASP.NET\\Exam\\Back\\wwwroot\\Images\\posters\\super-mario-poster.jpeg",
+      "PackagePath": "staticwebassets\\Images\\posters\\super-mario-poster.jpeg"
+    },
+    {
+      "Id": "D:\\Zhanas\\terricon\\Exam ASP.NET\\Exam\\Back\\wwwroot\\html\\index.html",
+      "PackagePath": "staticwebassets\\html\\index.html"
+    },
+    {
+      "Id": "D:\\Zhanas\\terricon\\Exam ASP.NET\\Exam\\Back\\wwwroot\\html\\login.html",
+      "PackagePath": "staticwebassets\\html\\login.html"
+    },
+    {
+      "Id": "D:\\Zhanas\\terricon\\Exam ASP.NET\\Exam\\Back\\wwwroot\\html\\movie.html",
+      "PackagePath": "staticwebassets\\html\\movie.html"
+    },
+    {
+      "Id": "D:\\Zhanas\\terricon\\Exam ASP.NET\\Exam\\Back\\wwwroot\\js\\index_script.js",
+      "PackagePath": "staticwebassets\\js\\index_script.js"
+    },
+    {
+      "Id": "D:\\Zhanas\\terricon\\Exam ASP.NET\\Exam\\Back\\wwwroot\\js\\login_script.js",
+      "PackagePath": "staticwebassets\\js\\login_script.js"
+    },
+    {
+      "Id": "D:\\Zhanas\\terricon\\Exam ASP.NET\\Exam\\Back\\wwwroot\\js\\movie_script.js",
+      "PackagePath": "staticwebassets\\js\\movie_script.js"
+    },
+    {
+      "Id": "D:\\Zhanas\\terricon\\Exam ASP.NET\\Exam\\Back\\wwwroot\\styles\\login.css",
+      "PackagePath": "staticwebassets\\styles\\login.css"
+    },
+    {
+      "Id": "D:\\Zhanas\\terricon\\Exam ASP.NET\\Exam\\Back\\wwwroot\\styles\\styles.css",
+      "PackagePath": "staticwebassets\\styles\\styles.css"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.CinemaAPI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.CinemaAPI.props",
+      "PackagePath": "build\\CinemaAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.CinemaAPI.props",
+      "PackagePath": "buildMultiTargeting\\CinemaAPI.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.CinemaAPI.props",
+      "PackagePath": "buildTransitive\\CinemaAPI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
