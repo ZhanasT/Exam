@@ -77,3 +77,15 @@ header {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+#submit {
+    margin: auto;
+    margin-top: 20px;
+    align-self: center;
+    display: block;
+    border: none;
+    background-color: #141414;
+    color: white;
+    width: 150px;
+    height: 30px;
+    cursor: pointer;
+}

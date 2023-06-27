@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\Images\\posters\\super-mario-poster.jpeg"
     },
     {
+      "Id": "D:\\Zhanas\\terricon\\Exam ASP.NET\\Exam\\Back\\wwwroot\\html\\account.html",
+      "PackagePath": "staticwebassets\\html\\account.html"
+    },
+    {
       "Id": "D:\\Zhanas\\terricon\\Exam ASP.NET\\Exam\\Back\\wwwroot\\html\\index.html",
       "PackagePath": "staticwebassets\\html\\index.html"
     },
@@ -27,6 +31,10 @@
     {
       "Id": "D:\\Zhanas\\terricon\\Exam ASP.NET\\Exam\\Back\\wwwroot\\html\\movie.html",
       "PackagePath": "staticwebassets\\html\\movie.html"
+    },
+    {
+      "Id": "D:\\Zhanas\\terricon\\Exam ASP.NET\\Exam\\Back\\wwwroot\\js\\account_script.js",
+      "PackagePath": "staticwebassets\\js\\account_script.js"
     },
     {
       "Id": "D:\\Zhanas\\terricon\\Exam ASP.NET\\Exam\\Back\\wwwroot\\js\\index_script.js",

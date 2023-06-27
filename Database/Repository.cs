@@ -23,7 +23,6 @@ public class Repository
             sessionToAdd.MovieId = session.MovieId;
             var startTime = new TimeOnly(session.DateTime.Hour, session.DateTime.Minute, session.DateTime.Second);
             sessionToAdd.StartTime = startTime;
-            Console.WriteLine(session.DateTime.Day);
             sessions.Add(sessionToAdd);
         }
         return sessions;
@@ -82,25 +81,41 @@ public class Repository
     }
     public async void AddUser(string login, string password)
     {
-        var userToAdd = new User();
-        userToAdd.Login = login;
-        userToAdd.Password = password;
-        db.Users.Add(userToAdd);
-        await db.SaveChangesAsync();
-    }
-    public List<bool> SearchUser(string login, string password)
-    {
-        var foundedUser = db.Users.Include(u => u.Login).ToList().First();
-        if (foundedUser is not null)
+        int lastId = 0;
+        if (db.Users.Any())
         {
-            if (foundedUser.Password == password)
-                return new List<bool> {true, true};
-            else
-                return new List<bool> {true, false};
+            lastId = (from user in db.Users
+                      orderby user.Id
+                      select user.Id).Last();
+            var userToAdd = new User();
+            userToAdd.Login = login;
+            userToAdd.Password = password;
+            userToAdd.Id = lastId + 1;
+            db.Users.Add(userToAdd);
+            await db.SaveChangesAsync();
+        }
+        else 
+        {
+            var userToAdd = new User();
+            userToAdd.Login = login;
+            userToAdd.Password = password;
+            userToAdd.Id = lastId + 1;
+            db.Users.Add(userToAdd);
+            await db.SaveChangesAsync();
+        }
+
+        
+    }
+    public User? SearchUser(string login, string password)
+    {
+        if (db.Users.Any(u => u.Login == login && u.Password == password))
+        {
+            return db.Users.Where(u => u.Login == login).ToList().First();
         }
         else
         {
-            return new List<bool> {false, false};
+            return null;
         }
+        
     } 
 }

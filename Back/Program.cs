@@ -6,6 +6,8 @@ using System.Security.Claims;
 using Microsoft.Extensions.FileProviders;
 using System.Text;
 using CinemaAPI.Models;
+using CinemaDB;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,7 +24,8 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidAudience = AuthOptions.AUDIENCE,
             ValidateLifetime = true,
             IssuerSigningKey = AuthOptions.GetSymmetricSecurityKey(),
-            ValidateIssuerSigningKey = true
+            ValidateIssuerSigningKey = true,
+            ClockSkew = TimeSpan.FromSeconds(500)
         };
     });
 
@@ -36,23 +39,60 @@ builder.Services.AddDirectoryBrowser();
 
 var app = builder.Build();
 
-app.UseAuthorization();
-app.UseAuthentication();
+app.MapPost("/security/createToken", (UserModel userModel) => {
+    var cinemaRepo = new Repository();
+    if (userModel.Username is null || userModel.Password is null)
+        return Results.BadRequest();
+    User? user = cinemaRepo.SearchUser(userModel.Username, userModel.Password);
+    if (user is null)
+        return Results.Unauthorized();
+    
+    var claims = new List<Claim> {new Claim(ClaimTypes.Name, user.Login)};
 
-app.Map("/login/{username}", (string username) => 
-{
-    var claims = new List<Claim> {new Claim(ClaimTypes.Name, username)};
     var jwt = new JwtSecurityToken(
         issuer: AuthOptions.ISSUER,
         audience: AuthOptions.AUDIENCE,
         claims: claims,
         expires: DateTime.UtcNow.Add(TimeSpan.FromMinutes(2)),
         signingCredentials: new SigningCredentials(AuthOptions.GetSymmetricSecurityKey(), SecurityAlgorithms.HmacSha256));
+    var encodedJwt = new JwtSecurityTokenHandler().WriteToken(jwt);
+    
+    var response = new
+    {
+        access_token = encodedJwt,
+        login = user.Login
+    };
 
-    return new JwtSecurityTokenHandler().WriteToken(jwt);
+    return Results.Json(response);
 });
 
-app.Map("/data", [Authorize] () => new { message= "Hello World!" });
+app.MapPost("/security/register", (UserModel userModel) => {
+    var cinemaRepo = new Repository();
+    if (userModel.Username is not null && userModel.Password is not null)
+    {
+        if (cinemaRepo.SearchUser(userModel.Username, userModel.Password) is null)
+        {
+            cinemaRepo.AddUser(userModel.Username, userModel.Password);
+            return Results.Ok();
+        }
+        else
+        {
+            return Results.BadRequest();
+        }
+        
+    }
+    else
+    {
+        return Results.BadRequest();
+    }
+});
+
+app.Map("/security/data", [Authorize(AuthenticationSchemes=JwtBearerDefaults.AuthenticationScheme)] () => new {  });
+app.UseCors(x =>  x.AllowAnyHeader().AllowAnyMethod().WithOrigins());
+
+app.UseAuthorization();
+app.UseAuthentication();
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -61,8 +101,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-app.UseCors("corsapp");
 
 app.UseStaticFiles();
 

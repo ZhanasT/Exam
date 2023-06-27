@@ -3,7 +3,26 @@ const movieInfoRequestURL = 'https://localhost:7274/api/Cinema/GetMovieInfo/';
 const commentsRequestURL = 'https://localhost:7274/api/Cinema/GetCommentsByMovie/';
 let movieId = new URL(location.href).searchParams.get("id");
 
+async function getData() {
+    const token = sessionStorage.getItem("accessToken");
+    // отправляем запрос к "/data
+    const response = await fetch("https://localhost:7274/security/data", {
+        method: "GET",
+        headers: {
+            "Accept": "application/json",
+            "Authorization": "Bearer " + token  // передача токена в заголовке
+        }
+    });
+
+    if (response.ok === true) {
+        const data = await response.json();
+        document.getElementById("login").innerHTML = sessionStorage.getItem("login");
+        document.getElementById("login").href = "./account.html"
+    }
+}
+
 async function getResource(url) {
+    await getData();
     const res = await fetch(`${url}`);
 
     if (!res.ok) {
@@ -53,8 +72,6 @@ function buildTimeTables(data) {
     if (document.getElementById("time-table-by-films") != null) 
         document.getElementById("time-table-by-films").remove();
 
-    console.log(data);
-
     //By films
     let tableElementByFilms = document.createElement('table');
     let containerByFilms = document.getElementById("sessions-by-films");
@@ -73,7 +90,6 @@ function buildTimeTables(data) {
     tableElementByFilms.appendChild(headerRow);
     
     customSort(data, ["movieId"]);
-    console.log(data);
     for (let sId = 0; sId < data.length; sId++) {
         let row = document.createElement('tr');
         for (let cellIndex = 0; cellIndex < 4; cellIndex++) {
@@ -85,7 +101,7 @@ function buildTimeTables(data) {
         linkElement.innerHTML = data[sId].movieTitle;
         linkElement.style.color = "black";
         row.childNodes[0].appendChild(linkElement);
-        row.childNodes[1].innerHTML = data[sId].startTime;
+        row.childNodes[1].innerHTML = `${data[sId].startTime[0]}${data[sId].startTime[1]}:${data[sId].startTime[3]}${data[sId].startTime[4]}`;
         row.childNodes[2].innerHTML = data[sId].hallNumber;
         row.childNodes[3].innerHTML = data[sId].price;
         tableElementByFilms.appendChild(row);

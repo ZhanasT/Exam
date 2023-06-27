@@ -83,3 +83,9 @@ input {
     height: 30px;
     cursor: pointer;
 }
+#password-again-input {
+    display: none;
+}
+#password-again-label {
+    display: none;
+}
